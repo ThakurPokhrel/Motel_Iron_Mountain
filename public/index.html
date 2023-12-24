@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Motel Management</title>
+</head>
+<body>
+  <h1>Motel Management</h1>
+
+  <div id="customer-form">
+    <h2>Customer Information</h2>
+
+<!-- Add this link to navigate to the Expenses page -->
+<a href="#" onclick="openExpensesPage()">Motel Expenses</a>
+
+
+    <form id="customer-form">
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" required>
+
+      <label for="middleName">Middle Name:</label>
+      <input type="text" id="middleName">
+
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" required>
+
+      <label for="driverLicense">Driver's License:</label>
+      <input type="text" id="driverLicense" required>
+
+      <label for="driverLicense">Room #:</label>
+      <input type="text" id="roomNumber" required>
+
+      <label for="dateOfBirth">Date of Birth (dd/mm/yyyy):</label>
+      <input type="text" id="dateOfBirth" placeholder="dd/mm/yyyy" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
+
+      <label for="phoneNumber">Phone Number:</label>
+      <input type="tel" id="phoneNumber" pattern="[0-9]{10}" placeholder="e.g., 1234567890" required>
+
+      <button type="button" onclick="addCustomer()">Add Customer</button>
+    </form>
+  </div>
+
+  <div id="customer-records">
+    <!-- Customer records will be displayed here -->
+  </div>
+
+
+
+<!-- Add this Expenses form -->
+<div id="expenses-form" style="display: none;">
+    <h2>Expenses Information</h2>
+    <form id="expenses-form">
+      <label for="vendor">Vendor:</label>
+      <input type="text" id="vendor" required>
+  
+      <label for="amount">Amount:</label>
+      <input type="text" id="amount" required>
+  
+      <label for="expenseDate">Date:</label>
+      <input type="text" id="expenseDate" placeholder="dd/mm/yyyy" required>
+  
+      <button type="button" onclick="addExpenses()">Add Expenses</button>
+      <button type="button" onclick="goBackToCustomerPage()">Back to Customer Page</button>
+    </form>
+  </div>
+
+  <!-- Add this Expenses Records section -->
+<div id="expenses-records">
+    <!-- Expenses records will be displayed here -->
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
+
